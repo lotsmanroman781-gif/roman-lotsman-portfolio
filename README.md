@@ -1,73 +1,56 @@
-# Roman Lotsman — Personal Portfolio
+# Roman Lotsman — Updated Portfolio
 
-A complete static portfolio website with live project links, actual project screenshots, PDF guides, project detail dialogs, hover zoom, and email-copy interaction.
+A responsive, static HTML/CSS/JavaScript portfolio ready for deployment to Vercel with **Framework Preset: Other**. No installation or build command is required.
 
-## Included
+## Deployment / replacing your old portfolio
 
-- `index.html`: portfolio content and links
-- `style.css`: responsive design and hover effects
-- `app.js`: project details and email-copy interaction
-- `images/`: screenshots captured from the deployed projects
-- `guides/`: supplied project PDF guides
-- `vercel.json`: static hosting configuration
+1. Download this ZIP and extract it.
+2. Open a terminal inside your existing cloned Git repository (`roman-lotsman-portfolio`).
+3. Copy `index.html`, `styles.css`, `script.js`, and the `assets/` folder from the ZIP into your repository root. Keep your existing `.git` directory intact.
+4. Run:
+   ```bash
+   git add .
+   git commit -m "Update portfolio from resume and add AI platform case studies"
+   git push origin main
+   ```
+   If your branch is not `main`, use `git branch --show-current` and push that branch instead.
+5. Vercel will normally redeploy automatically if the existing project is linked to this repository. Otherwise import your repository in Vercel, choose **Other**, set root to `./`, and leave the Build Command and Output Directory at defaults.
 
-No npm installation, build command, database, API key, or environment variable is needed. This is plain HTML, CSS, and JavaScript.
+To test locally, open `index.html` in your browser or run `python3 -m http.server 8000` in the extracted folder.
 
-## Preview locally
+## Changes included
 
-Open a terminal inside this folder and run:
+- Updated identity, verified PDF source details (email, subject areas, listed education).
+- Added StatGPT and AI DIAL as public **industry case studies**, with official URLs and EPAM attribution.
+- Preserved independent projects: OutcomeOS, TeamFlow and DecisionGap OS.
+- Project illustrations scale on hover; clicking opens the corresponding official website.
+- Responsive navigation, project filters, accessibility improvements, and background information adapted from the supplied resume.
+- No frontend dependencies and no API secrets.
 
-```bash
-python3 -m http.server 8000
+## Important factual checks before publishing
+
+The uploaded resume lists employment at **SoftServe** and **EPAM Systems**, but you stated in this conversation that you did **not** work for those companies. Therefore this website intentionally does **not** claim those employment records or attribute the companies' proprietary/open-source projects to you. The projects appear as separately labeled public case studies.
+
+The resume also states a B.Sc. at KPI from 2019 to 2022. That information is reproduced from your document but has not been independently verified. It may be worth confirming the exact credential and dates before posting publicly.
+
+The original supplied resume is **not** bundled as a public download, because it contains employment and project authorship claims you said were not accurate. After updating the resume to reflect verified experience, you can optionally add that revised file and a download link.
+
+Links to independent project deployments were taken from earlier conversation and have not been live-tested from this environment. Please open them manually before publication. Social link and email are configurable in `index.html`.
+
+## Structure
+
+```
+index.html
+styles.css
+script.js
+assets/
+  favicon.svg
+  preview-og.svg
+  outcomeos.svg
+  teamflow.svg
+  decisiongap.svg
+  statgpt.svg
+  aidial.svg
 ```
 
-Then open http://localhost:8000. Stop with Ctrl+C. Email copying works on localhost or HTTPS.
-
-## Push to a new GitHub repository
-
-1. Unzip this download and open the `Roman-Lotsman-Portfolio` folder.
-2. Create an EMPTY GitHub repository named `roman-lotsman-portfolio`. Do not initialize it with a README, license, or .gitignore.
-3. In Terminal, change into the extracted folder. On macOS you can type `cd `, drag the folder into Terminal, and press Return.
-4. Run these commands:
-
-```bash
-git init
-git add .
-git commit -m "Add Roman Lotsman portfolio"
-git branch -M main
-git remote add origin https://github.com/lotsmanroman781-gif/roman-lotsman-portfolio.git
-git push -u origin main
-```
-
-Use your actual repository URL if its name differs. These instructions assume a new, empty repository. GitHub authentication may be requested by your Git credential manager.
-
-## Deploy on Vercel
-
-1. Sign into Vercel and choose Add New → Project.
-2. Import the GitHub repository.
-3. Set Framework Preset to **Other**.
-4. Leave Root Directory at the repository root.
-5. Leave Build Command blank (disable its override if present).
-6. Set Output Directory to `.` (a single dot; override if necessary).
-7. Leave Install Command blank and add no environment variables.
-8. Click Deploy and open the returned deployment URL.
-
-Check each project image, the Visit live project buttons, and the PDF guide links after deployment. Later pushes to the connected production branch normally trigger new Vercel deployments.
-
-## Live projects
-
-- TeamFlow: https://team-flow-rose.vercel.app/
-- DecisionGap OS: https://decision-gap-os.vercel.app/
-- OutcomeOS: https://outcomeos-ruddy.vercel.app/
-
-TeamFlow screenshot shows the interactive demo with sample data. DecisionGap screenshot shows the public fictional storefront. OutcomeOS screenshot shows its public landing page. These are captures of actual deployed pages, not evidence of backend or integration verification.
-
-## Edit your portfolio
-
-Update personal text, email, links, and project cards in `index.html`. Project detail text and dialog links are in `app.js`. Replace screenshots in `images/` to update the previews, and replace files in `guides/` to update documentation.
-
-This export includes only portable portfolio files; it does not contain Sites metadata, Git credentials, or the source code of the three linked applications. The supplied PDF guides retain their original contents and embedded links.
-
-## Personal background update
-
-Includes experience and education transcribed from the supplied résumé, a résumé link, and the corrected contact email lotsmanroman781@gmail.com. Copy the updated index.html, style.css, app.js, images/, and guides/ into your existing checkout, preserving its .git folder. Then commit and push to redeploy. Résumé details and its original PDF are supplied by the portfolio owner.
+Illustrative screenshots in `assets` were newly created for this portfolio and are *not* screenshots of external products.
