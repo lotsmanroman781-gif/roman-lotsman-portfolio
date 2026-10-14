@@ -1,56 +1,60 @@
-# Roman Lotsman — Updated Portfolio
+# Roman Lotsman — One-Screen Portfolio
 
-A responsive, static HTML/CSS/JavaScript portfolio ready for deployment to Vercel with **Framework Preset: Other**. No installation or build command is required.
+An **original, single-page interactive portfolio** with a dashboard overview that fits in one desktop viewport. Inspired by the *idea* of interactive, section-based personal sites (e.g., masonliu.dev) but not copied from any site. Clicking navigation switches views inside the same page instead of vertically scrolling through multiple long sections.
 
-## Deployment / replacing your old portfolio
+## Contents
 
-1. Download this ZIP and extract it.
-2. Open a terminal inside your existing cloned Git repository (`roman-lotsman-portfolio`).
-3. Copy `index.html`, `styles.css`, `script.js`, and the `assets/` folder from the ZIP into your repository root. Keep your existing `.git` directory intact.
-4. Run:
+- `index.html` — all six views (Overview, Work experience, Projects, Skills, Education, Resume)
+- `styles.css` — responsive layout, visual system, project image hover-zoom
+- `script.js` — single-page navigation (`#experience`, `#projects`, ...), filters, card rendering
+- `assets/` — original illustration assets and portrait extracted from the newest user-supplied resume
+- `Roman-Lotsman-Resume.pdf` — **new, truthful portfolio resume** and embedded preview
+
+## Deploy for free to Vercel
+
+1. Unzip the archive.
+2. Open your existing portfolio repository folder (do NOT delete `.git`). Replace its `index.html`, `styles.css`, `script.js`, `assets/`, and `Roman-Lotsman-Resume.pdf` with the corresponding files in this ZIP.
+3. Run:
+
    ```bash
    git add .
-   git commit -m "Update portfolio from resume and add AI platform case studies"
+   git commit -m "Build one-screen interactive portfolio with updated resume"
    git push origin main
    ```
-   If your branch is not `main`, use `git branch --show-current` and push that branch instead.
-5. Vercel will normally redeploy automatically if the existing project is linked to this repository. Otherwise import your repository in Vercel, choose **Other**, set root to `./`, and leave the Build Command and Output Directory at defaults.
 
-To test locally, open `index.html` in your browser or run `python3 -m http.server 8000` in the extracted folder.
+   If the branch is not `main`, check with `git branch --show-current`, and push that name.
+4. Vercel should redeploy the connected repository. For a new Vercel project choose **Framework Preset: Other**, **Root Directory: .**, and leave build command blank. This is a static site without npm dependencies.
+5. For local testing from the project root: `python3 -m http.server 8000`, then open `http://localhost:8000`.
 
-## Changes included
+## What changed compared to the previous portfolio
 
-- Updated identity, verified PDF source details (email, subject areas, listed education).
-- Added StatGPT and AI DIAL as public **industry case studies**, with official URLs and EPAM attribution.
-- Preserved independent projects: OutcomeOS, TeamFlow and DecisionGap OS.
-- Project illustrations scale on hover; clicking opens the corresponding official website.
-- Responsive navigation, project filters, accessibility improvements, and background information adapted from the supplied resume.
-- No frontend dependencies and no API secrets.
+- Desktop first screen shows profile, an engineering snapshot, project previews, skill highlights, and the education / resume panel **without vertical page scrolling**.
+- The six views appear within the same screen when clicked. A long-page scroll isn't required on desktop; content-rich individual views can scroll *inside their panel* when necessary.
+- Mobile naturally scrolls because preventing scrolling on small screens would hide content.
+- Project images enlarge on hover and open the actual project/product URLs when clicked.
+- Added a clear **Work experience** tab and a **Resume** tab with embedded PDF and working download link.
+- Education updated to **Sept 2015 – July 2019**, per the latest uploaded resume (the previous version incorrectly used 2019–2022).
+- User-provided portrait reused from that PDF; contact details and technical skills updated.
+- Five project entries: OutcomeOS, TeamFlow, DecisionGap OS (independent builds); EPAM StatGPT and AI DIAL (external research/case studies).
 
-## Important factual checks before publishing
+## Important distinction: claims in the uploaded CV
 
-The uploaded resume lists employment at **SoftServe** and **EPAM Systems**, but you stated in this conversation that you did **not** work for those companies. Therefore this website intentionally does **not** claim those employment records or attribute the companies' proprietary/open-source projects to you. The projects appear as separately labeled public case studies.
+The uploaded PDF listed SoftServe (2019–2022) and EPAM (2022–present) as employers, but the user explicitly stated earlier in this chat that they **never worked at these companies or contributed to the two EPAM products**. Therefore, this website and its downloadable PDF do **not** repeat those employer claims as factual work history. Instead, the Work experience tab documents independent engineering activity and clearly labeled technical case studies. **Do not replace the bundled resume with false employment or contribution claims.** Real employers, dates, and contributions can be added whenever substantiated.
 
-The resume also states a B.Sc. at KPI from 2019 to 2022. That information is reproduced from your document but has not been independently verified. It may be worth confirming the exact credential and dates before posting publicly.
+The university and education dates appear as self-reported details from the user's new PDF and were not independently verified.
 
-The original supplied resume is **not** bundled as a public download, because it contains employment and project authorship claims you said were not accurate. After updating the resume to reflect verified experience, you can optionally add that revised file and a download link.
+## Public URLs
 
-Links to independent project deployments were taken from earlier conversation and have not been live-tested from this environment. Please open them manually before publication. Social link and email are configurable in `index.html`.
+- OutcomeOS: https://outcomeos-ruddy.vercel.app/
+- TeamFlow: https://team-flow-rose.vercel.app/
+- DecisionGap OS: https://decision-gap-os.vercel.app/
+- StatGPT (EPAM product): https://statgpt.dialx.ai/
+- AI DIAL (EPAM product): https://dialx.ai/
 
-## Structure
+### Accessibility / compatibility
 
-```
-index.html
-styles.css
-script.js
-assets/
-  favicon.svg
-  preview-og.svg
-  outcomeos.svg
-  teamflow.svg
-  decisiongap.svg
-  statgpt.svg
-  aidial.svg
-```
-
-Illustrative screenshots in `assets` were newly created for this portfolio and are *not* screenshots of external products.
+- Standard HTML, CSS, JavaScript. No framework required.
+- Keyboard links and focus styles; Escape returns to Overview.
+- Honors reduced-motion settings.
+- Browser PDF preview with open/download fallback.
+- Responsive down to mobile; font services are optional and system fonts substitute when offline.
