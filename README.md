@@ -67,3 +67,7 @@ TeamFlow screenshot shows the interactive demo with sample data. DecisionGap scr
 Update personal text, email, links, and project cards in `index.html`. Project detail text and dialog links are in `app.js`. Replace screenshots in `images/` to update the previews, and replace files in `guides/` to update documentation.
 
 This export includes only portable portfolio files; it does not contain Sites metadata, Git credentials, or the source code of the three linked applications. The supplied PDF guides retain their original contents and embedded links.
+
+## Personal background update
+
+Includes experience and education transcribed from the supplied résumé, a résumé link, and the corrected contact email lotsmanroman781@gmail.com. Copy the updated index.html, style.css, app.js, images/, and guides/ into your existing checkout, preserving its .git folder. Then commit and push to redeploy. Résumé details and its original PDF are supplied by the portfolio owner.
